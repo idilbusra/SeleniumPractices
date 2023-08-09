@@ -27,9 +27,9 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.10.0</version>
+
         </dependency>
-        <!--Burayi guncellestirmek icin, direkt 4.10.0 ==> 4.10.1 yapabiliriz, sag ustte
-        yanda maven dosya kismindan girip refresh-load yapabiliriz, guncelleyebiliriz -->
-    </dependencies>
+
+        </dependencies>
 
 </project>
