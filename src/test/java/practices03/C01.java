@@ -1,9 +1,23 @@
 package practices03;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.time.Duration;
+
 public class C01 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //siteye git
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+
+        driver.get("https://www.lalshoes.com/");
+        Thread.sleep(1500);
+
         //hesabim butonuna tikla
         //giris yap buyonuna tikla
         //uyeol butonuna tikla
