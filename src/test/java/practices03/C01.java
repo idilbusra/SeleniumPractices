@@ -42,8 +42,16 @@ public class C01 {
         driver.findElement(By.xpath("//input[@id='LastName']")).sendKeys("DollarsLover");
         Thread.sleep(1500);
 
-        //fakemailden mail al
-        //fakemail icin driver olustur
+        //fakemailden mail al, fakemail icin driver olustur
+
+        WebDriver driverFakeMail = new ChromeDriver();
+        driverFakeMail.get("https://www.fakemail.net/");
+        Thread.sleep(1500);
+
+        WebElement fakeMail = driverFakeMail.findElement(By.className("animace"));
+        String emailFakeMail = fakeMail.getText();
+        driverFakeMail.close();
+
         //mail kutusuna fakemailden gelen mail adresini yaz
         //sifre kutusuna sifre gir
         //kayitol/uyeol butonna tikla
