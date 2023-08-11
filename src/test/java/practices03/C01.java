@@ -39,6 +39,9 @@ public class C01 {
         Thread.sleep(1500);
 
         //soyisim kutusuna soyisim gir
+        driver.findElement(By.xpath("//input[@id='LastName']")).sendKeys("DollarsLover");
+        Thread.sleep(1500);
+
         //fakemailden mail al
         //fakemail icin driver olustur
         //mail kutusuna fakemailden gelen mail adresini yaz
