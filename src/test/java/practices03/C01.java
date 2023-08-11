@@ -26,6 +26,9 @@ public class C01 {
         Thread.sleep(1500);
 
         //giris yap butonuna tikla
+        WebElement girisYApElement = driver.findElement(By.xpath("(//a[@class='userlink-login active-hover'])[1]"));
+        girisYApElement.click();
+
         //uyeol butonuna tikla
         //isim kutusuna isim gir
         //soyisim kutusuna soyisim gir
