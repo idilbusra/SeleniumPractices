@@ -35,6 +35,9 @@ public class C01 {
         Thread.sleep(1500);
 
         //isim kutusuna isim gir
+        driver.findElement(By.id("FirstName")).sendKeys("Ben");
+        Thread.sleep(1500);
+
         //soyisim kutusuna soyisim gir
         //fakemailden mail al
         //fakemail icin driver olustur
