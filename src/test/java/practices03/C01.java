@@ -1,7 +1,9 @@
 package practices03;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
@@ -19,7 +21,11 @@ public class C01 {
         Thread.sleep(1500);
 
         //hesabim butonuna tikla
-        //giris yap buyonuna tikla
+        WebElement hesabimElement = driver.findElement(By.xpath("(//span[@class='dropdown-toggle'])[2]"));
+        hesabimElement.click();
+        Thread.sleep(1500);
+
+        //giris yap butonuna tikla
         //uyeol butonuna tikla
         //isim kutusuna isim gir
         //soyisim kutusuna soyisim gir
