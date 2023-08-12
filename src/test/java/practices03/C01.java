@@ -65,8 +65,21 @@ public class C01 {
         pwdElement.sendKeys(pwd);
         Thread.sleep(1500);
 
-        //kayitol/uyeol butonna tikla
+        //kayitol/uyeol butona tikla
+        WebElement kayitOlElement = driver.findElement(By.id("register-button"));
+        kayitOlElement.click();
+        Thread.sleep(1500);
+
         //alisverise devam et butonuna tikla
+
+        WebElement alisverisedevamElement = driver.findElement(By.className("register-continue-button"));
+        alisverisedevamElement.click();
+        Thread.sleep(1500);
+
+        driver.close();
+
+
+
 
 
     }
