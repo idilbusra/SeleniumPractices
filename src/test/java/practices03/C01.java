@@ -1,5 +1,6 @@
 package practices03;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -53,9 +54,15 @@ public class C01 {
         driverFakeMail.close();
 
         //mail kutusuna fakemailden gelen mail adresini yaz
+
+        WebElement emailElement = driver.findElement(By.id("EmailOrPhone"));
+        emailElement.sendKeys(emailFakeMail);
+        Thread.sleep(1500);
+
         //sifre kutusuna sifre gir
         //kayitol/uyeol butonna tikla
         //alisverise devam et butonuna tikla
+
 
     }
 
