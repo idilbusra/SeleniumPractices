@@ -60,6 +60,11 @@ public class C01 {
         Thread.sleep(1500);
 
         //sifre kutusuna sifre gir
+        String pwd = "Aa123456";
+        WebElement pwdElement = driver.findElement(By.id("Password"));
+        pwdElement.sendKeys(pwd);
+        Thread.sleep(1500);
+
         //kayitol/uyeol butonna tikla
         //alisverise devam et butonuna tikla
 
