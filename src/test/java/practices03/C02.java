@@ -17,10 +17,18 @@ public class C02 {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         //5-"sahibinden.com" adresine gidelim
         // 6-Bu web adresinin sayfa basligini(title) ve adres(url)ini alalim
+        driver.get("https://sahibinden.com");
+        driver.navigate().refresh();
+        driver.navigate().refresh();
+        driver.navigate().refresh();
+
+        String title=driver.getTitle();
+        String pageURL= driver.getCurrentUrl();
+
         // 7-Title ve Url'nin "Kiralik" kelimesinin icerip icermedigini kontrol edelim
         // 8-Ardindan "gittigidiyor.com" adresine gidelim
         //9-bu adresin basligini alalim ve "alisveris" kelimesini icerip icermedigini
