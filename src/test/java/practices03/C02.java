@@ -29,7 +29,20 @@ public class C02 {
         String title=driver.getTitle();
         String pageURL= driver.getCurrentUrl();
 
-        // 7-Title ve Url'nin "Kiralik" kelimesinin icerip icermedigini kontrol edelim
+        // 7-Title ve URL'nin "Kiralik" kelimesinin icerip icermedigini kontrol edelim
+
+        if (title.contains("Kiralik")){
+            System.out.println("sahibinden.com  title testi PASSED");
+        }else{
+            System.out.println("sahibinden.com title testi FAILED");
+        }
+
+        if (pageURL.contains("Kiralik")){
+            System.out.println("URL testi PASSED");
+        }else{
+            System.out.println("URL testi FAILED");
+        }
+
         // 8-Ardindan "gittigidiyor.com" adresine gidelim
         //9-bu adresin basligini alalim ve "alisveris" kelimesini icerip icermedigini
         //kontrol edelim
