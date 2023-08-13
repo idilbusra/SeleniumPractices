@@ -49,8 +49,15 @@ public class C02 {
         driver.navigate().refresh();
         driver.navigate().refresh();
 
-        //9-bu adresin basligini alalim ve "alisveris" kelimesini icerip icermedigini
-        //kontrol edelim
+        //9-Bu adresin basligini alalim ve "alisveris" kelimesini icerip icermedigini kontrol edelim
+
+        String title2 =driver.getTitle();
+        if (title2.contains("alisveris")){
+            System.out.println("gittigidiyor.com title testi PASSED");
+        }else{
+            System.out.println("gittigidiyor.com title testi FAILED");
+        }
+
         //10-Bir onceki web sayfamiza geri donelim
         //11-Sayfayi yenileyelim
         //12-Daha sonra web sayfamiza tekrar donelim ve oldugumuz sayfayi kapatalim
