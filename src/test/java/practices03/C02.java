@@ -44,6 +44,11 @@ public class C02 {
         }
 
         // 8-Ardindan "gittigidiyor.com" adresine gidelim
+        driver.navigate().to("https://gittigidiyor.com");
+        driver.navigate().refresh();
+        driver.navigate().refresh();
+        driver.navigate().refresh();
+
         //9-bu adresin basligini alalim ve "alisveris" kelimesini icerip icermedigini
         //kontrol edelim
         //10-Bir onceki web sayfamiza geri donelim
