@@ -66,8 +66,10 @@ public class C02 {
         //12-Daha sonra web sayfamiza tekrar donelim ve oldugumuz sayfayi kapatalim
         //13-Son adim olarak butun sayfalarimizi kapatmis olalim
 
+        driver.navigate().forward();
+        driver.close();
+        driver.quit();
+
     }
-
-
 
 }
