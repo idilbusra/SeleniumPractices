@@ -60,6 +60,9 @@ public class C02 {
 
         //10-Bir onceki web sayfamiza geri donelim
         //11-Sayfayi yenileyelim
+        driver.navigate().back();
+        driver.navigate().refresh();
+
         //12-Daha sonra web sayfamiza tekrar donelim ve oldugumuz sayfayi kapatalim
         //13-Son adim olarak butun sayfalarimizi kapatmis olalim
 
