@@ -56,6 +56,8 @@ public class C03 {
         String fakeMailAdress = mailFakeElement.getText();
         driverFakeMail.close();
         //    10.Email kutusuna git email adresini al
+        WebElement emailElement = driver.findElement(By.id("NewEmail"));
+        emailElement.sendKeys(fakeMailAdress);
         //    11.Email adresin fakeMailden alinan adresi gir
         //    12.Cep telefonu bilgilerini gir
         //    13.Önemli kampanyalardan eposta ile haberdar olmak istiyorum, kutusuna tikla
