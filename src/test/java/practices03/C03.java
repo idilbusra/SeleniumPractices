@@ -33,7 +33,10 @@ public class C03 {
         WebElement hesapOlusturButonu = driver.findElement(By.cssSelector(".fa.fa-pencil-alt"));
         hesapOlusturButonu.click();
         Thread.sleep(3000);
-        //    4.hesap olustur butonuna tikla
+        //    4.Giriş butonuna tikla
+        WebElement girisButonu = driver.findElement(By.cssSelector(".fa.fa-user"));
+        girisButonu.click();
+        Thread.sleep(3000);
         //    5.Tekrar hesap olustur butonuna tikla
         //    6.Adiniz bolumune "Busra" gir
         //    7.Soyadiniz bolumune "Surname" gir.
