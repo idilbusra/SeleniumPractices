@@ -1,14 +1,16 @@
 package practices03;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
 public class C03 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
 
@@ -28,6 +30,9 @@ public class C03 {
         }else System.out.println("Siteye giris yapilamadi");
 
         //    3.hesap olustur butonuna tikla
+        WebElement hesapOlusturButonu = driver.findElement(By.cssSelector(".fa.fa-pencil-alt"));
+        hesapOlusturButonu.click();
+        Thread.sleep(3000);
         //    4.hesap olustur butonuna tikla
         //    5.Tekrar hesap olustur butonuna tikla
         //    6.Adiniz bolumune "Busra" gir
