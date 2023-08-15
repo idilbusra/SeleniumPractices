@@ -51,10 +51,13 @@ public class C03 {
         driverFakeMail.get("https://www.fakemail.net/");
         driverFakeMail.manage().window().maximize();
 
-        //    9.fakemail adresine git
-        //    10.email kutusuna git email adresini al
-        //    11.email adresin fakeMailden alinan adresi gir
-        //    12.Ceptelefonu bilgilerini gir
+        //    9.Fakemail adresine git
+        WebElement mailFakeElement = driverFakeMail.findElement(By.cssSelector(".animace"));
+        String fakeMailAdress = mailFakeElement.getText();
+        driverFakeMail.close();
+        //    10.Email kutusuna git email adresini al
+        //    11.Email adresin fakeMailden alinan adresi gir
+        //    12.Cep telefonu bilgilerini gir
         //    13.Önemli kampanyalardan eposta ile haberdar olmak istiyorum, kutusuna tikla
         //    14.Sifre kutusuna sifre kurallarina uygun sifre gir
         //    Şifrenizde 8 veya daha fazla karakter kullanın.
