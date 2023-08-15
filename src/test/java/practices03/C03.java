@@ -38,6 +38,8 @@ public class C03 {
         girisButonu.click();
         Thread.sleep(3000);
         //    5.Tekrar hesap olustur butonuna tikla
+        WebElement tekrarHesapButonu = driver.findElement(By.cssSelector(".fa.fa-pencil-alt"));
+        tekrarHesapButonu.click();
         //    6.Adiniz bolumune "Busra" gir
         //    7.Soyadiniz bolumune "Surname" gir.
         //    8.FakeMail'den fake mail al
