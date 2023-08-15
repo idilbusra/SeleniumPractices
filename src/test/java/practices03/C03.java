@@ -41,6 +41,8 @@ public class C03 {
         WebElement tekrarHesapButonu = driver.findElement(By.cssSelector(".fa.fa-pencil-alt"));
         tekrarHesapButonu.click();
         //    6.Adiniz bolumune "Busra" gir
+        WebElement isimGirisi = driver.findElement(By.id("FirstName"));
+        isimGirisi.sendKeys("Busra");
         //    7.Soyadiniz bolumune "Surname" gir.
         //    8.FakeMail'den fake mail al
         //    9.fakemail adresine git
