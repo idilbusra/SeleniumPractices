@@ -47,6 +47,10 @@ public class C03 {
         WebElement soyisimGirisi = driver.findElement(By.id("LastName"));
         soyisimGirisi.sendKeys("Surname");
         //    8.FakeMail'den fake mail al
+        WebDriver driverFakeMail = new ChromeDriver();
+        driverFakeMail.get("https://www.fakemail.net/");
+        driverFakeMail.manage().window().maximize();
+
         //    9.fakemail adresine git
         //    10.email kutusuna git email adresini al
         //    11.email adresin fakeMailden alinan adresi gir
