@@ -44,6 +44,8 @@ public class C03 {
         WebElement isimGirisi = driver.findElement(By.id("FirstName"));
         isimGirisi.sendKeys("Busra");
         //    7.Soyadiniz bolumune "Surname" gir.
+        WebElement soyisimGirisi = driver.findElement(By.id("LastName"));
+        soyisimGirisi.sendKeys("Surname");
         //    8.FakeMail'den fake mail al
         //    9.fakemail adresine git
         //    10.email kutusuna git email adresini al
