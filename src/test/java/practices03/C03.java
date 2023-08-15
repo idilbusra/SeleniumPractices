@@ -17,7 +17,16 @@ public class C03 {
 
         //Task Steps
         //    1.siteye git
+        driver.get("https://www.alkapida.com/");
+
         //    2.siteye gittigini kontrol et
+        String actualData_URL = driver.getCurrentUrl();
+        String expectedData_URL = "https://www.alkapida.com/";
+
+        if (actualData_URL.contains(expectedData_URL)){
+            System.out.println("Siteye giris yapildi");
+        }else System.out.println("Siteye giris yapilamadi");
+
         //    3.hesap olustur butonuna tikla
         //    4.hesap olustur butonuna tikla
         //    5.Tekrar hesap olustur butonuna tikla
