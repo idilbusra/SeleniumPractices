@@ -74,7 +74,11 @@ public class C03 {
         //    Şifrenizde 8 veya daha fazla karakter kullanın.
         //    Şifrenizin en az bir harf içermesine dikkat edin.
         //    Şifrenizin en az bir sayı içermesine dikkat edin.
-        //
+        String password ="1234567B9";
+
+        WebElement pwdElement = driver.findElement(By.id("NewPassword"));
+        pwdElement.sendKeys(password);
+
         //    15.Sifre tekrar kutusuna ayni sifreyi tekrar gir
         //    16.Hesabimi olustur butonuna tikla
         //    17.Mevcut bilgilerle giris yap
