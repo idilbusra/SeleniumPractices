@@ -80,6 +80,9 @@ public class C03 {
         pwdElement.sendKeys(password);
 
         //    15.Sifre tekrar kutusuna ayni sifreyi tekrar gir
+        WebElement pwdRepeatElement = driver.findElement(By.id("NewPassword2"));
+        pwdRepeatElement.sendKeys(password);
+
         //    16.Hesabimi olustur butonuna tikla
         //    17.Mevcut bilgilerle giris yap
 
