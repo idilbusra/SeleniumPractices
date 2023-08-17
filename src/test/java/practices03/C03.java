@@ -84,6 +84,9 @@ public class C03 {
         pwdRepeatElement.sendKeys(password);
 
         //    16.Hesabimi olustur butonuna tikla
+        WebElement hesapOlusturElement = driver.findElement(By.xpath("//*[contains(text(),'Hesabımı Oluştur')]"));
+        hesapOlusturElement.click();
+
         //    17.Mevcut bilgilerle giris yap
 
 
