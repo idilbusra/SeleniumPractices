@@ -58,9 +58,18 @@ public class C03 {
         //    10.Email kutusuna git email adresini al
         WebElement emailElement = driver.findElement(By.id("NewEmail"));
         emailElement.sendKeys(fakeMailAdress);
+
         //    11.Email adresin fakeMailden alinan adresi gir
+        emailElement.sendKeys(fakeMailAdress);
+
         //    12.Cep telefonu bilgilerini gir
+        WebElement ceptelefonuElement = driver.findElement(By.id("MobilPhone"));
+        ceptelefonuElement.sendKeys("05000000000");
+
         //    13.Önemli kampanyalardan eposta ile haberdar olmak istiyorum, kutusuna tikla
+        WebElement onemliKampanyaElement = driver.findElement(By.id("cbInformedEmail"));
+        onemliKampanyaElement.click();
+
         //    14.Sifre kutusuna sifre kurallarina uygun sifre gir
         //    Şifrenizde 8 veya daha fazla karakter kullanın.
         //    Şifrenizin en az bir harf içermesine dikkat edin.
