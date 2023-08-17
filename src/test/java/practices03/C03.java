@@ -88,6 +88,9 @@ public class C03 {
         hesapOlusturElement.click();
 
         //    17.Mevcut bilgilerle giris yap
+        WebElement girisYapElement = driver.findElement(By.cssSelector("fa.fa-user"));
+        girisYapElement.click();
+
 
 
     }
