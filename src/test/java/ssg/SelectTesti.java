@@ -75,4 +75,47 @@ public class SelectTesti extends TestBase {
             System.out.println(programlamaDili.getText());
         }
     }
+
+    @Test
+    public void dropDownTesti03() {
+        /*
+        Test Görevi - 4:
+            letcode.in/dropdowns adresine gidin.
+            Kahramanlar menüsünün, çoklu seçim yapılabilen bir menü olduğunu doğrulayın.
+            Kahramanlar menüsünden 3 tane kahramanı index numaraları ile seçin.
+            Menüde 3 elemanın seçili olduğunu doğrulayın.
+            Menüde seçili elemanların isimlerini doğrulayın.
+            Seçili elemanlardan birinin seçimini kaldırın.
+            Menüde 2 elemanın seçili olduğunu doğrulayın.
+            Menüde seçili elemanlarının isimlerini doğrulayın.
+            Seçili elemanların hepsinin seçimini kaldırın.
+            Menüde hiçbir elemanın seçili olmadığını doğrulayın.
+         */
+
+        // LetCode sitesine git
+        driver.get("https://letcode.in/dropdowns");
+
+        // Kahramanlar menüsünün, çoklu seçim yapılabilen bir menü olduğunu doğrula
+        WebElement kahramanlar = driver.findElement(By.id("superheros"));
+        Select select = new Select(kahramanlar);
+        Assert.assertTrue(select.isMultiple());
+
+        // Kahramanlar menüsünden 3 tane kahramanı index numaraları ile seç
+        select.selectByIndex(1);
+        select.selectByIndex(2);
+        select.selectByIndex(3);
+
+        // Menüde seçili elemanların isimlerini doğrula
+        List<WebElement> seciliKahramanlarListesi = select.getAllSelectedOptions();
+        for (WebElement kahraman : seciliKahramanlarListesi) {
+            Assert.assertTrue(kahraman.getText().equals("Aquaman")
+                    || kahraman.getText().equals("The Avengers")
+                    || kahraman.getText().equals("Batman"));
+        }
+
+        // Seçili elemanlardan birinin seçimini kaldır
+        select.deselectByIndex(1);
+
+    }
+
 }
