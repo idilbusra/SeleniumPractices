@@ -24,4 +24,18 @@ public class ActionsTestleri extends TestBase {
         actions.click(menu3).perform();
 
     }
+
+
+    @Test
+    public void contextClick() {
+        driver.get("https://the-internet.herokuapp.com/context_menu");
+
+        WebElement hotSpot = driver.findElement(By.id("hot-spot"));
+
+        Actions actions = new Actions(driver);
+        actions.contextClick(hotSpot).perform();
+
+        driver.switchTo().alert().accept();
+
+    }
 }
