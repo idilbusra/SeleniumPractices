@@ -4,7 +4,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.TestBase;
 
+import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 public class WindowHandle extends TestBase {
@@ -48,6 +50,22 @@ public class WindowHandle extends TestBase {
         System.out.println("İkinci Pencere Başlığı: " + driver.getTitle());
 
         driver.switchTo().window(ilkPencere);
+        System.out.println("İlk Pencere Başlığı: " + driver.getTitle());
+
+    }
+
+    @Test
+    public void test03() {
+        driver.get("https://letcode.in/windows");
+
+        driver.findElement(By.id("home")).click();
+
+//        Set<String> pencereler = driver.getWindowHandles();
+        List<String> pencereListesi = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(pencereListesi.get(1));
+        System.out.println("İkinci Pencere Başlığı: " + driver.getTitle());
+
+        driver.switchTo().window(pencereListesi.get(0));
         System.out.println("İlk Pencere Başlığı: " + driver.getTitle());
 
     }
