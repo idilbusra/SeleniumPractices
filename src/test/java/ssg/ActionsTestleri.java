@@ -38,4 +38,17 @@ public class ActionsTestleri extends TestBase {
         driver.switchTo().alert().accept();
 
     }
+
+    @Test
+    public void dragAndDrop() {
+        driver.get("https://demoqa.com/droppable");
+
+        WebElement dragElement = driver.findElement(By.id("draggable"));
+        WebElement dropElement = driver.findElement(By.id("droppable"));
+
+        Actions actions = new Actions(driver);
+        actions.dragAndDrop(dragElement, dropElement).perform();
+
+    }
+
 }
