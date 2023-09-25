@@ -2,6 +2,7 @@ package ssg;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
@@ -51,4 +52,37 @@ public class ActionsTestleri extends TestBase {
 
     }
 
+    @Test
+    public void keyDownVeKeyUp() {
+        driver.get("https://the-internet.herokuapp.com/iframe");
+
+        WebElement baslik = driver.findElement(By.tagName("h3"));
+        baslik.sendKeys(Keys.chord(Keys.CONTROL, "c"), "adsasdasd");
+
+        Actions actions = new Actions(driver);
+        actions
+                .doubleClick(baslik)
+                .click(baslik)
+                .keyDown(Keys.CONTROL)
+                .sendKeys("c")
+                .keyUp(Keys.CONTROL)
+                .build()
+                .perform();
+
+        driver.switchTo().frame(0);
+
+        WebElement paragraf = driver.findElement(By.tagName("p"));
+        paragraf.clear();
+
+        actions
+                .click(paragraf)
+                .keyDown(Keys.CONTROL)
+                .sendKeys("v")
+                .keyUp(Keys.CONTROL)
+                .build()
+                .perform();
+
+    }
 }
+
+
