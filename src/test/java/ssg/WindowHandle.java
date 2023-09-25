@@ -2,6 +2,8 @@ package ssg;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 import utilities.TestBase;
 
 import java.util.ArrayList;
@@ -67,6 +69,27 @@ public class WindowHandle extends TestBase {
 
         driver.switchTo().window(pencereListesi.get(0));
         System.out.println("İlk Pencere Başlığı: " + driver.getTitle());
+
+    }
+
+
+    @Test
+    public void fakeMailTesti() {
+        driver.get("https://www.kitapyurdu.com/index.php?route=account/register");
+
+        WebElement epostaKutusu = driver.findElement(By.id("register-email"));
+
+        driver.switchTo().newWindow(WindowType.TAB);
+        driver.get("https://www.fakemail.net/");
+        WebElement fakeMailKutusu = driver.findElement(By.id("email"));
+        String fakeMail = fakeMailKutusu.getText();
+
+        List<String> pencereListesi = new ArrayList<>(driver.getWindowHandles());
+
+        driver.switchTo().window(pencereListesi.get(0));
+        epostaKutusu.sendKeys(fakeMail);
+
+        driver.switchTo().window(pencereListesi.get(1));
 
     }
 
